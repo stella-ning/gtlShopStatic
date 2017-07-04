@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no，minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9;IE=EmulateIE10; IE=EmulateIE11">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="Author" content="Calvin,stella-ning">
+	<title>账户信息</title>
+    <link rel="shortcut icon" href="images/PClogo.png">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" media="screen and (min-width:980px)" href="css/pc.css"><!--大于980px的时候-->
+	<link rel="stylesheet" media="screen and (max-width:780px)" href="css/mobile.css"><!--手机的时候-->
+	<script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/rem.js"></script>
+	<script src="js/idangerous.swiper2.7.6.min.js"></script>
+	<script src="js/index.js"></script>
+    <script src="js/carfly.js"></script>
+    <script src="js/shopCar.js"></script>
+
+    <!-- <!–[if lt IE 9]>
+        <script src=”http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js”></script>
+    <![endif]–> -->
+</head>
+
+<body>
+
+	<!-- 头部 -->
+	<header class="wrap">
+		<div class="head container clearfix">
+			<div class="logo fl">
+				<a href=""><img src="images/logo.png" alt="" ></a>
+			</div>
+            <div class="openNav" id="openNav">
+                <img src="images/navIcon.png" alt="">
+            </div>
+            <div class="nav-wrap fr">
+                <div class="login">
+                    <a href="login.html">登录</a>
+                    <a href="register.html">注册</a>
+                </div>
+                <ul class="headNav" id="nav">
+    				<li ><a href="index.html">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+    				<li><a href="vipCenter.html">会员中心</a></li>
+    				<li class="hover"><a href="helpCenter.html">帮助中心</a></li>
+                    <li><a href="http://guangtoulao.gtljm.com/">官方网站</a></li>
+                    <li><a href="http://www.gtljm.com">加盟网站</a></li>
+                </ul>
+    		</div>
+            <div class="last">
+                <a href="myShopCar.html">
+                    <span class="shopCarIcon">
+                        <!-- 上标 -->
+                        <sup>3</sup>
+                    </span>
+                </a>
+                <div class="shopCar-wrap"  onselectstart="return false;">
+                    <p class="notes">最新加入的商品</p>
+                    <div class="shopCarList">
+                        <div class="carList-box">
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="1" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="1" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="1" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="summary clearfix">
+                            <div class="sumLeft fl">
+                                <p>
+                                    共
+                                    <strong class="shopTotal">0</strong>
+                                    件商品
+                                </p>
+                                <p>
+                                    共计￥
+                                    <strong class="shopTprice">0.00</strong>
+                                </p>
+                            </div>
+                            <div class="sumRight fr">
+                                <a href="">进入结算</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+	</header>
+
+    <section class="wrap vipCenter-wrap">
+        <div class="container clearfix">
+            <div class="helpNav">
+                <a  href="vipCenter.html">账号信息</a>
+                <a href="orderMg.html">我的订单</a>
+                <a href="addressAdmin.html">地址管理</a>
+                <a href="security.html">账号安全</a>
+                <a class="hover" href="aboutUser.html">关于会员</a>
+            </div>
+            <div class="vipCenter">
+                <div class="title">
+                    关于会员
+                </div>
+                <div class="aboutUser">
+                    <p>
+                        注册成为光头佬联圣网上商城会员，必须执行以下权利和义务：
+                    </p>
+                    <p>
+                        1、会员有权力拥有自己在『光头佬联圣网上商城』的会员名及密码，并有权力使用自己的会员名及密码随时登录『光头佬联圣网上商城』。会员不得以任何形式擅自转让或授权他人使用自己的『光头佬联圣网上商城』会员名。
+                    </p>
+                    <p>
+                        2、会员有权根据本服务协议的规定，以及『光头佬联圣网上商城』网上发布的相关规则，利用『光头佬联圣网上商城』购买网站商品和服务、查询物品信息、参加『光头佬联圣网上商城』的有关活动以及有权享受『光头佬联圣网上商城』提供的其他的有关信息服务。
+                    </p>
+                    <p>
+                        3、会员有义务在注册时提供自己的真实资料，并保证诸如电子邮件地址、联系电话、联系地址、邮政编码等内容的有效性及安全性，保证『光头佬联圣网上商城』可以通过上述联系方式与自己进行联系。同时，会员也有义务在相关资料实际变更时及时更新有关注册资料。
+                    </p>
+                    <p>
+                        4、会员保证不以他人资料在『光头佬联圣网上商城』进行注册或认证。
+                    </p>
+                    <p>
+                        5、如有需向会员发送通知，『光头佬联圣网上商城』将通知通过会员注册时所留联系电话、联系地址等任意一种方式送达即视为『光头佬联圣网上商城』履行了通知义务。
+                    </p>
+                    <p>
+                        6、会员应当保证在使用『光头佬联圣网上商城』网络平台进行购买商品和服务的过程中，遵守诚实信用的原则，不扰乱购买网站商品和服务的正常秩序，不从事与购买网站商品和服务无关的行为。
+                    </p>
+                    <p>
+                        7、会员承诺自己在使用『光头佬联圣网上商城』时实施的所有行为遵守国家法律、法规和『光头佬联圣网上商城』的相关规定以及各种社会公共利益和公共道德。对于任何法律后果的发生，会员将以自己的名义独立承担所有相应的法律责任。
+                    </p>
+                    <p>
+                        8、会员同意接收来自『光头佬联圣网上商城』的信息。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 底部 -->
+    <footer class="wrap">
+        <div class="container clearfix">
+            <div class="footLeft">
+                <a href=""><img src="images/footLogo.png" alt=""></a>
+                <img src="images/ewm.png" alt="" class="ewm">
+            </div>
+            <div class="footRight">
+                <p class="footLinks">
+                    <a href="javascript:;">
+                        光头佬官方微信
+                        <span class="ewmImg">
+                            <img src="images/ewm.png" alt="">
+                        </span>
+                    </a>
+                    <a href="http://guangtoulao.gtljm.com/">光头佬官方网站</a>
+                    <a href="http://www.gtljm.com">光头佬加盟网站</a>
+                </p>
+                <p class="footLinks">
+                    <a href="index.html">
+                        首页
+                    </a>
+                    <a href="vipCenter.html">会员中心</a>
+                    <a href="helpCenter.html">帮助中心</a>
+                </p>
+                <p class="joinTel">
+                    <img src="images/tel.png" alt="">
+                </p>
+                <p class="info">
+                    广州光头佬联圣贸易有限公司
+
+                </p>
+                <p class="info">
+                    &copy;2017 粤ICP备13066649号-1
+                </p>
+
+            </div>
+        </div>
+    </footer>
+    <script src="js/shopCar.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,477 @@
+@charset "UTF-8";
+@import "var.less";
+
+body{
+    overflow-x: hidden;
+}
+.wrap{
+    margin-bottom:2.3rem;
+    .container{
+        width:95%;
+        margin:0 auto;
+        padding:0;
+    }
+}
+/*---头部---*/
+header.wrap {
+    height:2rem;
+    overflow:hidden;
+    margin-bottom: 0;
+    .container{
+        padding:0;
+        margin:0;
+    }
+    .head{
+        width:100%;
+        height:2rem;
+        margin:0 auto;
+        .head-title{
+            font-size:.8rem;
+            line-height:2rem;
+            padding-left:1rem;
+        }
+        .openNav{
+            display:block;
+            width:1rem;
+            height:1rem;
+            background:url(../images/nav.svg)no-repeat center;
+            background-size:cover;
+            margin:.5rem;
+        }
+        .topNw{
+            display:none;
+            position:absolute;
+            top:2rem;
+            left:0;
+            width:100%;
+            height:100%;
+            overflow:hidden;
+            background:rgba(0,0,0,.5);
+            z-index:1;
+            .topN{
+                position:absolute;
+                top:0;
+                right:0;
+                li{
+                    font-size:.6rem;
+                    border-bottom:1px solid #eee;
+                    a{
+                        display:block;
+                        line-height:1.5rem;
+                        padding:0 1rem;
+                        text-align:center;
+                        color:#fff;
+                        background: #0793eb;
+                    }
+                }
+            }
+        }
+
+    }
+}
+/*----用户信息----*/
+.infomations{
+    height:6.5rem;
+    color:#fff;
+    .container{
+        padding-top:1rem;
+        padding-bottom:.5rem;
+        padding-left:0;
+        padding-right:0;
+        width:100%;
+        .info-con{
+            padding:0 .8rem;
+            .name{
+                font-size:.8rem;
+            }
+            .tel,address{
+                font-size:.6rem;
+            }
+        }
+        .edit{
+            height:1.55rem;
+            line-height:1.55rem;
+            text-align:center;
+            background:#fff;
+            a{
+                font-size:.8rem;
+                color:@color-blue;
+            }
+        }
+    }
+
+}
+
+/*--首页导航--*/
+nav.wrap{
+    margin-top:1rem;
+    .container{
+        width:100%;
+        .nav-list{
+            li{
+                float:left;
+                width:50%;
+                height:3rem;
+                text-align:center;
+                background:#fff;
+                border:1px solid #ddd;
+                &:nth-child(2n){
+                    border-left:none;
+                }
+                &:nth-child(1){
+                    a::before{
+                        background:url(../images/icon/icon-list.png)no-repeat;
+                        background-size:cover;
+                    }
+                }
+                &:nth-child(2){
+                    a::before{
+
+                        background:url(../images/icon/icon-scorepay.png)no-repeat;
+                        background-size:cover;
+                    }
+                }
+                a{
+                    display:block;
+                    color:#000;
+                    &::before{
+                        content: '';
+                        display:inline-block;
+                        width:1.3rem;
+                        height:1.3rem;
+
+                        vertical-align: super;
+                        margin-right:.5rem;
+                    }
+                    .con{
+                        padding:.5rem 0rem;
+                        display:inline-block;
+                        p{
+                            padding:0;
+                            margin:0;
+                        }
+                        .text{
+                            font-size:.8rem;
+                        }
+                        .num{
+                            font-size:.7rem;
+                            color:@color-blue;
+                        }
+
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/*-----------------------分割线---------------------------*/
+/*---订单管理---*/
+.headHide{
+    display:none;
+}
+.infoHide{
+    display:none;
+}
+.tip{
+    width:100%;
+    height:2rem;
+    background:#fff;
+    margin-bottom:1rem;
+    padding-left:.5rem;
+    .toBack{
+        display:inline-block;
+        vertical-align: middle;
+        width:.8rem;
+        height:.8rem;
+        background:url(../images/arrow_left.png)no-repeat center;
+        background-size:cover;
+        margin-right:.2rem;
+        i{
+            display:none;
+        }
+    }
+    span{
+        display:inline-block;
+        height:2rem;
+        line-height:2rem;
+        font-size:.8rem;
+        color:#333;
+        vertical-align: middle;
+    }
+
+}
+.orderList{
+    margin-bottom:1rem;
+    .container{
+        .orderList-con{
+            .listItem{
+                width:100%;
+                margin-bottom:1rem;
+                background:#fff;
+                font-size:.6rem;
+                color:#000;
+                padding:15px;
+                .listItem-con{
+                    li{
+                        margin-bottom:10px;
+                        &:last-child{
+                            text-align:right;
+                            border-top:1px solid #ddd;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-----------------------分割线---------------------------*/
+/*---新订单---*/
+.newOrder{
+    margin-top:1rem;
+    .container{
+        width:100%;
+        .newOrderList{
+            width:100%;
+            background:#fff;
+            margin-bottom:15px;
+            position:relative;
+            padding-bottom:2rem;
+            .listHead{
+                background:#ddd;
+                color:#000;
+                font-size:12px;
+                font-weight: bold;
+                padding:.5rem;
+                .order-info{
+                    width:70%;
+                    p{
+                        width:100%;
+                        line-height:.8rem;
+                        margin-bottom:.3rem;
+
+                    }
+                }
+                .order-money{
+                    position:absolute;
+                    bottom:.8rem;
+                    right:1rem;
+                    color:#f69292;
+                }
+                .order-handle{
+                    padding:0 1rem;
+                    height:1rem;
+                    line-height:1rem;
+                    background:#0792ea;
+                    color:#fff;
+                    font-size:.6rem;
+                    font-weight: normal;
+                    margin-top:.5rem;
+                }
+            }
+            .listDel{
+                padding:.5rem;
+                border-bottom:1px solid #ddd;
+                .userInfo{
+                    width:100%;
+                    color:#666;
+                    p{
+                        span{
+                            padding-right:.5rem;
+                            &:last-child{
+                                padding-right:0;
+                            }
+                        }
+                    }
+                }
+                .listInfo{
+                    width:100%;
+                    ul{
+                        li{
+                            width:100%;
+                            span{
+                                display:inline-block;
+                                margin-bottom:10px;
+                            }
+                            .footName{
+                                width:60%;
+                                text-align: left;
+                            }
+                            .footPrice{
+                                width:35%;
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-----------------------分割线---------------------------*/
+/*---修改用户资料---*/
+.userInfoEdit{
+    margin-top:1rem;
+    .container{
+        background:@color-pureWhite;
+        .form-horizontal{
+            width:90%;
+            margin:.5rem auto;
+            p{
+                font-size:16px;
+                text-align:left;
+                margin-bottom:1rem;
+            }
+            .form-group{
+                width:90%;
+                margin:0 auto 20px;
+                .tip{
+                    padding:0;
+                    height:auto !important;
+                    margin:0;
+                    .valid_message{
+                        display:none!important;
+                        height:0 !important;
+                    }
+                }
+                .formIp{
+                    display:inline-block;
+                    width:100%;
+                    .code{
+                        display:inline-block;
+                        width:55%;
+                        margin-right:2%;
+                    }
+                    .getCode{
+                        display:inline-block;
+                        width:40%;
+                        height:35px;
+                        line-height:35px;
+                        background:#0792ea;
+                        a{
+                            display:block;
+                            width:100%;
+                            text-align:center;
+                            color:@color-pureWhite;
+                        }
+                    }
+                }
+                .button{
+                    text-align: center;
+                    margin-top:1rem;
+                    .btn{
+                        width:100%;
+                        background:#0792ea;
+                        text-align: center;
+                        color:@color-pureWhite;
+                        font-size:16px;
+                        outline:none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-----------------------分割线---------------------------*/
+/*---订单详情---*/
+.orderDetail{
+    margin-top:-1rem;
+    .container{
+        width:100%;
+        .orderNb{
+            width:100%;
+            background:#fff;
+            span{
+                display:block;
+                line-height:2rem;
+                font-size:12px;
+                color:#000;
+                font-weight: bold;
+                border-top:1px solid #ddd;
+                padding-left:20px;
+            }
+        }
+        .order-com{
+            width:100%;
+            background:#fff;
+            ul{
+                vertical-align: middle;
+                li{
+                    display:inline-block;
+                    padding:5px;
+                    font-size:.65rem;
+                    vertical-align: middle;
+                    font-weight: bold;
+                    width:100%;
+                    border-bottom:1px solid #ddd;
+                    p{
+                        margin-bottom:5px;
+                    }
+                    &.userInfo{
+                        border-top:1px solid #ddd;
+                        p{
+                            padding-left:10px;
+                            span{
+                                display:inline-block;
+                                line-height:25px;
+                                padding-right:.8rem;
+                            }
+                        }
+                    }
+                    &.order{
+                        font-weight: normal;
+                        background:#f8f8f8;
+                        p{
+                            clear:both;
+                            span{
+                                &:nth-child(1){
+                                    float:left;
+                                    padding-left:15px;
+                                }
+                                &:nth-child(2){
+                                    float:right;
+                                    padding-right:15px;
+                                }
+                            }
+                        }
+                    }
+                    &.pay{
+                        p:nth-child(1){
+                            span{
+                                &:nth-child(2){
+                                    font-size:16px;
+                                    color:#f69292;
+                                }
+                            }
+                        }
+
+                    }
+                    &.status{
+                        p{
+                            display:inline-block;;
+                            vertical-align: middle;
+                            &:first-child{
+                                margin-top:.6rem;
+                            }
+                            &.handle{
+                                float:right;
+                                vertical-align: middle;
+                            }
+                        }
+                        .btn-primary{
+                            margin-top:10px;
+                            background:#0793eb;
+                            border:1px solid #0793eb;
+                            padding:3px 15px;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

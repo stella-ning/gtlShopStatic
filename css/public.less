@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import 'var.less';
+/*---公共样式---*/
+.wrap{
+    width:100%;
+}
+a,a:active,a:hover,a:focus,a:visited{
+    text-decoration: none;
+}
+/*--分页--*/
+.pagination-wrap{
+    position:relative;
+    width:100%;
+    .pagination{
+        position: static;
+        text-align:right;
+        li{
+            float:none;
+            display:inline-block;
+
+        }
+    }
+    .pagination>li>a, .pagination>li>span{
+        padding: 2px 6px;
+        color:@color-red;
+
+    }
+}
+
+header.wrap {
+    background:@color-white;
+    .head{
+        position:relative;
+        .nav li{
+            a{
+                color:@color-white;
+            }
+        }
+    }
+}
+
+/*--轮播图--*/
+.swiper-container{
+    width:100%;
+    overflow:hidden;
+    .swiper-wrapper .swiper-slide a{
+        display:block;
+        width:100%;
+        height:100%;
+        img{
+            width:100%;
+            height:100%;
+            max-width:100%;
+        }
+    }
+}
+.pagination{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    text-align:center;
+    width:100%;
+    z-index:10;
+}
+.swiper-pagination-switch{
+    display:inline-block;
+    background:@color-gray;
+    border-radius:50%;
+    transition: width .2s ease;
+    -moz-transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+    -o-transition: width .2s ease;
+
+
+}
+.swiper-active-switch{
+    background:@color-red;
+}
+
+
+
+
+
+
+/*--改变select选择框的默认样式---*/
+select {
+  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+  border: solid 1px @color-gray;
+
+  /*很关键：将默认的select选择框样式清除*/
+  // appearance:none;
+  // -moz-appearance:none;
+  // -webkit-appearance:none;
+
+  /*在选择框的最右侧中间显示小箭头图片*/
+    background-image: url("../images/select-arrow.png") no-repeat right center;
+  background-color:@color-white;
+
+
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  padding-right: 14px;
+}
+
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+//select::-ms-expand { display: none; }

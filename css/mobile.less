@@ -1,0 +1,685 @@
+@charset "UTF-8";
+@import "var.less";
+
+body{
+    overflow-x: hidden;
+    background: @color-white;
+}
+
+/*----购物车公共样式----*/
+.count{
+    height:25px;
+    font-size:12px;
+    color:#000;
+    span{
+        padding-right:10px;
+        font-weight: normal;
+    }
+    a{
+        display:inline-block;
+        border:1px solid #eee;
+        height:25px;
+        width:25px;
+        line-height:25px;
+        text-align:center;
+        color:#000;
+    }
+    input{
+        width:25px;
+        height:25px;
+        border:1px solid #eee;
+        outline: none;
+        text-align:center;
+        color:#000;
+    }
+}
+.btnCart{
+    display:block;
+    width:100%;
+    background: @color-red url(../images/shopCar01.png) no-repeat 15% center;
+    text-align:center;
+    color:#fff;
+    font-size:14px;
+    padding-left:20px;
+    border-radius:30px;
+    &:hover,&:focus,&:visited,&:active{
+        color:#fff;
+    }
+}
+
+
+/*---头部---*/
+header.wrap {
+    height:2rem;
+    overflow:hidden;
+    .container{
+        padding:0 .5rem;
+        margin:0;
+    }
+    .head{
+        position:fixed;
+        width:100%;
+        height:2rem;
+        z-index:999;
+        margin:0 auto;
+        background:@color-white;
+        .logo{
+            float:left;
+            width:6rem;
+            height:2rem;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+        .openNav{
+            float:right;
+            display:block;
+            width:1.5rem;
+            height:1.5rem;
+            margin-top:.25rem;
+            img{
+                width:100%;
+                height:100%;
+                vertical-align: middle;
+            }
+        }
+        .nav-wrap{
+            .login{
+                height:2rem;
+                line-height:2rem;
+                a{
+                    color:@color-red;
+                    font-size:.7rem;
+                    padding:0 .5rem;
+                    &:first-child{
+                        border-right:1px solid @color-red;
+                    }
+                }
+
+            }
+            .headNav{
+                display:none;
+                position:absolute;
+                top:2rem;
+                right:0rem;
+                width:100%;
+                background:@color-moblieNav;
+                li{
+                    width:100%;
+                    height:1.8rem;
+                    text-align: left;
+                    font-size:@font-sizeMo-N;
+                    padding:0 .7rem;
+
+                    &.links{
+                        display:none;
+                    }
+                   a{
+                       display:block;
+                       line-height:1.8rem;
+                       text-align:center;
+                       color:@color-white;
+                       font-weight: bold;
+                       padding:0 .5rem;
+                       border-bottom: .01rem solid @color-white;
+
+                   }
+                    &.hover a{
+                      color:rgba(255,255,255,.8);
+                      font-weight: normal;
+                   }
+
+               }
+            }
+
+        }
+        .last{
+             position:fixed;
+             top:5rem;
+             right:1rem;
+             background:rgba(255,255,255,.8);
+             a{
+                 display:block;
+                 padding:.1rem;
+                  border:1px solid #ccc;
+                 .shopCarIcon{
+                     display:block;
+                     background: url(../images/shopCar.png) no-repeat 30%;
+                     height: 1rem;
+                     width: 0rem;
+                     background-size: 50%;
+                     padding: .2rem 1.2rem;
+                     line-height: 41px;
+
+                     sup{
+                         top:-1.5em;
+                         right:-.8em;
+                         background:@color-red;
+                         font-size:12px;
+                         font-weight: normal;
+                         color:#fff;
+                         border-radius: 50%;
+                         padding: .1rem .2rem;
+                     }
+                 }
+             }
+             .shopCar-wrap{
+                 display:none;
+             }
+        }
+    }
+}
+
+/*--轮播图--*/
+#banner{
+    height:8rem;
+    .swiper-wrapper{
+        height:100% !important;
+        .swiper-slide{
+            height:100% !important;
+        }
+    }
+}
+.swiper-pagination-switch{
+    display:inline-block;
+    width:.4rem;
+    height:0.4rem;
+    margin:0 0.3rem !important;
+
+}
+.bannerShow{
+    margin-bottom:1.5rem;
+    .pagination{
+        margin-bottom:5px;
+    }
+    .container{
+        display:none;
+    }
+
+}
+.produceCategory{
+    margin-bottom: 1.1rem;
+    .container{
+        width:95%;
+        margin:0 auto;
+        padding:0;
+        ul{
+            width:100%;
+            margin-bottom:0;
+            li{
+                float:left;
+                width:49%;
+                height:6rem;
+                margin-right:2%;
+                margin-bottom:.6rem;
+                &:nth-child(2n){
+                    margin-right:0;
+                }
+                a{
+                    display:block;
+                    position:relative;
+                    height:100%;
+                    width:100%;
+                    img{
+                        width:100%;
+                        height:100%;
+                    }
+                    p{
+                        position:absolute;
+                        left:0;
+                        bottom:0;
+                        width:100%;
+                        height:1.5rem;
+                        line-height:1.5rem;
+                        background:rgba(0,0,0,.6);
+                        color:#fff;
+                        font-size:16px;
+                        text-align: center;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*-------------------------------------产品列表---------------------------------------*/
+/*--面包屑导航--*/
+.listsrpNav{
+    margin-bottom:.5rem;
+    .listsrpNav-con{
+            a{
+                font-size:14px;
+                color:#000;
+                &:hover{
+                    color:@color-red;
+                }
+                i.iconArrow{
+                    display: inline-block;
+                    font-size: 0;
+                    background: url(../images/splitsIcon.png);
+                    background-repeat: no-repeat;
+                    background-position: -111px -423px;
+                    width: 5px;
+                    height: 9px;
+                    margin: 5px 2px 0;
+                }
+            }
+        }
+
+}
+/*--产品筛选--*/
+.listsrpSortbar{
+    margin-bottom:1rem;
+    .container{
+        .sortbar{
+            a{
+                display:inline-block;
+                width:3rem;
+                height:30px;
+                text-align: center;
+                line-height: 30px;
+                border:1px solid #ccc;
+                color:#ababab;
+                font-size:14px;
+                margin-right:5px;
+                &:hover,&.active{
+                    color:#fff;
+                    background: @color-red;
+                    border-color:@color-red;
+                }
+            }
+        }
+    }
+}
+/*--产品列表--*/
+.listsrpItemlist{
+    margin-bottom:2rem;
+    .container{
+        .items{
+            padding-top:0.5rem;
+            border-top:1px solid #ccc;
+            .item{
+                float:left;
+                width:49%;
+                height:6rem;
+                margin-right:2%;
+                margin-bottom:15px;
+                &:nth-child(2n){
+                    margin-right:0;
+                }
+                .itemCon{
+                    .count{
+                        display:none;
+                    }
+                    .produceImg{
+                        display:block;
+                        width:100%;
+                        height:4.5rem;
+                        img{
+                            width:100%;
+                            height:100%;
+                        }
+                        &:hover{
+                            opacity: .75;
+                        }
+                    }
+                    .produceInfo{
+                        float:left;
+                        margin:5px auto 10px;
+                        .produceName{
+                            float:left;
+                            font-size:12px;
+                            color:#000;
+
+                            &:hover{
+                                color:@color-red;
+                            }
+                        }
+                        .producePrice{
+                            float:right;
+                            font-size:16px;
+                            color:@color-red;
+                            sub{
+                                font-size: 12px;
+                                bottom:0;
+                                &:nth-child(1){
+                                    right:-.5em;
+                                }
+                                &:nth-child(2){
+                                    left:-.5em;
+                                }
+                            }
+                        }
+                    }
+                    .produceName,.producePrice{
+                        height:30px;
+                        line-height:30px;
+                    }
+
+                    .btnCart{
+                        display:block;
+                        float: right;
+                        width: 16%;
+                        height: 20px;
+                        background: #cc1400 url(../images/shopCar01.png) no-repeat 42% center;
+                        background-size: 55%;
+                        text-indent: -1000px;
+                        border-radius: 20px;
+                        margin-top: 10px;
+
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/*-------------------------------------产品详情页-------------------------------------*/
+.produceDetail-wrap{
+    margin-bottom:1.5rem;
+    .container{
+        position:relative;
+        .mainNav-wrap{
+            display:none;
+        }
+        .produceDetail{
+            width:100%;
+            height:auto;
+            padding-left:0;
+            .listsrpNav{
+                padding-top:10px;
+            }
+            /*---产品详情内容---*/
+            .proDCon{
+                width:100%;
+                height:auto;
+                overflow:hidden;
+                .produceImg{
+                    float:none;
+                    width:100%;
+                    height:10rem;
+                    img{
+                        width:100%;
+                        height:100%;
+
+                    }
+                }
+                .proInfo{
+                    margin-top:1.5rem;
+                    float:none;
+                    width:100%;;
+                    height:14rem;
+                    position:relative;
+                    .produceName{
+                        color:#000;
+                        font-size:18px;
+                        font-weight: bold;
+                        line-height:35px;
+                    }
+                    p.info-list{
+                        font-size:14px;
+                        color:#aaaaaa;
+                        i{
+                            display:inline-block;
+                            width:80px;
+                            text-align:right;
+                        }
+                    }
+                    .proPrice-wrap{
+                        background:#f9f9f9;
+                        padding:10px 0;
+                        sub,.price{
+                            color:@color-red;
+                            font-weight: bold;
+                        }
+                        sub{
+                            font-size:16px;
+                        }
+                        .price{
+                            font-size: 20px;
+                        }
+                    }
+                    .proInfomation{
+                        margin-top:20px;
+                    }
+                    .buy{
+                        .count{
+                            margin-bottom:10px;
+                            font-size:14px;
+                            color:#aaaaaa;
+                            span{
+                                display:inline-block;
+                                width:80px;
+                                text-align: right;
+                            }
+                        }
+                        .summary{
+                            position:fixed;
+                            bottom:0;
+                            width:100%;
+                            height: 2rem;
+                            background:#fff;
+                            z-index: 9999;
+                            padding-top: 0.3rem;
+                            .sumLeft{
+                                font-size:14px;
+                                color:#aaaaaa;
+                                i,strong{
+                                    color:@color-red;
+                                }
+                                .priceTotal{
+                                    font-size:20px;
+                                }
+                            }
+                            .sumRight{
+                                .btnCart{
+                                    display:block;
+                                    width:174px;
+                                    text-align: center;
+                                    height:30px;
+                                    line-height:30px;
+                                    border-radius:0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+/*---产品介绍--*/
+.produceIntro{
+    margin-bottom:1.5rem;
+    .container{
+        .introduceTitle{
+            width:100%;
+            height:2rem;
+            background:#eee;
+            padding-left:.8rem;
+            margin-bottom:1.5rem;
+            span{
+                display:block;
+                width:85px;
+                height:2rem;
+                line-height:2rem;
+                text-align:center;
+                background:#fff;
+                color:#000;
+                font-size:14px;
+            }
+        }
+        .introduceCon{
+            color:#000;
+        }
+    }
+}
+
+/*-------------------------------------帮助中心-------------------------------------*/
+.helpCenter-wrap{
+    width:100%;
+    margin-bottom:1.5rem;
+    .container{
+        .helpNav{
+            margin:1.5rem auto;
+            text-align:center;
+            a{
+                display:inline-block;
+                width:40%;
+                height: 40px;
+                line-height:40px;
+                text-align:center;
+                background:#eee;
+                color:#fff;
+                font-size:18px;
+                margin-bottom:5px;
+                border-radius:2px;
+                &.hover{
+                    background:@color-red;
+                }
+            }
+        }
+        .helpCenterCon{
+            float:left;
+            width:100%;
+            background:#eee;
+            border-top:4px solid @color-red;
+            padding:.5rem;
+            p{
+                color:@color-red;
+                font-size:16px;
+            }
+            img{
+                width:100%;
+                height:auto;
+            }
+            .items{
+                width:100%;
+                .item{
+                    width:100%;
+                    height:auto;
+                    .itemQ{
+                        height:50px;
+                        line-height:50px;
+                        font-size:14px;
+                        color:@color-red;
+                        border-bottom:1px solid #ddd;
+                        span{
+                            float:right;
+                            cursor:pointer;
+                            i{
+                                display:inline-block;
+                                padding-right:5px;
+                                &:nth-child(1){
+                                    transform:rotateZ(90deg);
+                                    font-size:20px;
+                                    vertical-align: middle;
+                                    transition:all .5s ease;
+                                }
+                            }
+                        }
+                    }
+                    .itemA{
+                        display:none;
+                        font-size:14px;
+                        color:#000;
+                        line-height:25px;
+                        margin-bottom:15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+footer.wrap{
+    padding-top:.8rem;
+    border-top:2px solid @color-red;
+    padding-bottom:2rem;
+    .container{
+        height:auto;
+        .footLeft{
+            margin-bottom: 1rem;
+            float: left;
+            a{
+                display:inline-block;
+                width:4rem;
+                height:4rem;
+                img{
+                    width:100%;
+                    height:100%;
+                }
+            }
+            img.ewm{
+                display:none;
+            }
+        }
+        .footRight{
+            text-align: right;
+            float: right;
+            width: 70%;
+            .footLinks{
+                font-size: 12px;
+                &:nth-child(1){
+                    display:none;
+                    a{
+                        color:@color-red;
+                        border-right:1px solid @color-red;
+                    }
+
+                }
+                &:nth-child(2){
+                    a{
+                        color:#000;
+                        border-right:1px solid #000;
+                    }
+                }
+                a{
+                    display:inline-block;
+                    position:relative;
+                    padding:0 8px 0px 5px;
+                    &:last-child{
+                        border:none;
+                    }
+                    .ewmImg{
+                        display:none;
+                        width:60px;
+                        height:60px;
+                        position:absolute;
+                        top:-60px;
+                        left:15px;
+                        img{
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                    &:hover{
+                        .ewmImg{
+                            display:block;
+                        }
+                    }
+
+                }
+            }
+            .joinTel{
+                width: 6rem;
+                height: 2.2rem;
+                margin: 0 auto 10px;
+                margin-right: 0px;
+                img{
+                    width:100%;
+                    height:100%;
+                }
+            }
+        }
+    }
+}

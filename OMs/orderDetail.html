@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="Author" content="Calvin,stella-ning">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=yes"/>
+    <meta name="msapplication-tap-highlight" content="no" />
+	<title>订单详情</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" media="only screen and (min-width:980px) and (max-width:1960px)" href="css/pc.css">
+	<link rel="stylesheet" media="only screen and (min-width:320px) and (max-width:780px)" href="css/mobile.css">
+
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/rem.js"></script>
+    <script src="js/index.js"></script>
+    <script src="layer/layer.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+	<header class="wrap">
+		<div class="head container clearfix">
+            <p class="head-title fl">光头佬联圣订单管理系统</p>
+            <span class="fr openNav"></span>
+            <nav class="topNw">
+                <ul class="topN">
+                    <li ><a href="index.html">首页</a></li>
+                    <li class="active"><a href="orderManage.html">订单管理</a></li>
+                    <li><a href="newOrder.html">新订单</a></li>
+                </ul>
+            </nav>
+		</div>
+	</header>
+    <!-- 加盟商信息 -->
+    <section class="wrap infomations infoHide">
+        <div class="container clearfix">
+            <div class="info-con">
+                <p class="name">钟村牌坊店</p>
+                <p class="tel">联系电话：13580396808</p>
+                <p class="address">店铺地址：广州市番禺区钟村镇钟村第二牌坊人民路33号</p>
+            </div>
+            <div class="edit">
+                <a href="userInfoEdit.html">修改资料</a>
+            </div>
+        </div>
+    </section>
+    <section class="wrap tip">
+        <div class="container clearfix">
+            <a href="javascript:history.go(-1)" class="toBack to-orderList" >
+            </a>
+            <span>订单详情</span>
+        </div>
+    </section>
+    <section class="wrap orderDetail">
+        <div class="container">
+            <div class="orderNb">
+                <span>订单号：1245786456445454</span>
+                <span>下单时间：2017-04-19 12:08:50</span>
+            </div>
+            <div class="order-com">
+                <ul>
+                    <li class="userInfo">
+                        <p>
+                            配送地址：广东省广州市海珠区 新港西路135号 中大科技园A座404（张三 收）
+                        </p>
+                        <p>
+                            <span>张三</span>
+                            <span>13580396808</span>
+                        </p>
+                    </li>
+                    <li class="order">
+                        <p>
+                            <span>水晶胶 500g</span>
+                            <span>￥10 * 5</span>
+                        </p>
+                        <p>
+                            <span>水晶胶 500g</span>
+                            <span>￥10 * 5</span>
+                        </p>
+                        <p>
+                            <span>水晶胶 500g</span>
+                            <span>￥10 * 5</span>
+                        </p>
+                        <p>
+                            <span>水晶胶 500g</span>
+                            <span>￥10 * 5</span>
+                        </p>
+                        <p>
+                            <span>水晶胶 500g</span>
+                            <span>￥10 * 5</span>
+                        </p>
+                    </li>
+                    <li class="pay">
+                        <p>
+                            <span>已付金额：</span>
+                            <span>￥100</span>
+                        </p>
+                        <p>
+                            <span>支付方式：</span>
+                            <span>支付宝支付</span>
+                        </p>
+                    </li>
+                    <li class="status">
+                        <p>
+                            退款原因：没货了
+                        </p>
+                        <p class="handle">
+                            <button type="button" class="btn btn-primary" data-url="data.json">确定退款</button>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $('.handle .btn').on('click',function(){
+            var num = 1;
+            var URL = $(this).data('url');
+            layer.open({
+                content: '确定要退款吗？',
+                btn: ['确定', '取消'],
+                yes: function(index, layero){
+                    $.ajax({
+                        url : URL,
+                        type : 'post',
+                        data : num,
+                        success : function(data){
+                            layer.msg('退款成功');
+                        },
+                        error: function(data){
+                            layer.msg('退款失败，请稍后再试');
+                        }
+                    })
+                    layer.close(index);
+
+                },
+                cancel: function(index, layero){
+                    layer.close(index);
+                }
+            });
+        })
+    </script>
+</body>
+</html>

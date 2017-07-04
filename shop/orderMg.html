@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no，minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9;IE=EmulateIE10; IE=EmulateIE11">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="Author" content="Calvin,stella-ning">
+	<title>我的订单</title>
+    <link rel="shortcut icon" href="images/PClogo.png">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" media="screen and (min-width:980px)" href="css/pc.css"><!--大于980px的时候-->
+	<link rel="stylesheet" media="screen and (max-width:780px)" href="css/mobile.css"><!--手机的时候-->
+	<script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/rem.js"></script>
+	<script src="js/idangerous.swiper2.7.6.min.js"></script>
+	<script src="js/index.js"></script>
+    <script src="js/carfly.js"></script>
+    <script src="js/shopCar.js"></script>
+    <!-- <!–[if lt IE 9]>
+        <script src=”http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js”></script>
+    <![endif]–> -->
+</head>
+
+<body>
+
+	<!-- 头部 -->
+	<header class="wrap">
+		<div class="head container clearfix">
+			<div class="logo fl">
+				<a href=""><img src="images/logo.png" alt="" ></a>
+			</div>
+            <div class="openNav" id="openNav">
+                <img src="images/navIcon.png" alt="">
+            </div>
+            <div class="nav-wrap fr">
+                <div class="login">
+                    <a href="login.html">登录</a>
+                    <a href="register.html">注册</a>
+                </div>
+                <ul class="headNav" id="nav">
+    				<li ><a href="index.html">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+    				<li><a href="vipCenter.html">会员中心</a></li>
+    				<li class="hover"><a href="helpCenter.html">帮助中心</a></li>
+                    <li><a href="http://guangtoulao.gtljm.com/">官方网站</a></li>
+                    <li><a href="http://www.gtljm.com">加盟网站</a></li>
+                </ul>
+    		</div>
+            <div class="last">
+                <a href="myShopCar.html">
+                    <span class="shopCarIcon">
+                        <!-- 上标 -->
+                        <sup>3</sup>
+                    </span>
+                </a>
+                <div class="shopCar-wrap"  onselectstart="return false;">
+                    <p class="notes">最新加入的商品</p>
+                    <div class="shopCarList">
+                        <div class="carList-box">
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="1" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="1" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="1" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="summary clearfix">
+                            <div class="sumLeft fl">
+                                <p>
+                                    共
+                                    <strong class="shopTotal">0</strong>
+                                    件商品
+                                </p>
+                                <p>
+                                    共计￥
+                                    <strong class="shopTprice">0.00</strong>
+                                </p>
+                            </div>
+                            <div class="sumRight fr">
+                                <a href="">进入结算</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+	</header>
+
+    <!-- 我的订单 -->
+    <section class="wrap vipCenter-wrap">
+        <div class="container clearfix">
+            <div class="helpNav">
+                <a href="vipCenter.html">账号信息</a>
+                <a class="hover" href="orderMg.html">我的订单</a>
+                <a href="addressAdmin.html">地址管理</a>
+                <a href="security.html">账号安全</a>
+                <a href="aboutUser.html">关于会员</a>
+            </div>
+            <div class="vipCenter">
+                <div class="title">
+                    我的订单
+                </div>
+                <div class="orderMg-wrap">
+                    <!-- 订单标题 -->
+                    <ul class="orderMg-title  clearfix">
+                        <li>商品</li>
+                        <li>单价</li>
+                        <li>数量</li>
+                        <li>实付款（元）</li>
+                        <li>订单状态</li>
+                    </ul>
+                    <!--一条订单内容 -->
+                    <div class="orderMg-item isSend">
+                        <div class="orderMg-info">
+                            <span>
+                                订单号：BFED2548626474545364
+                            </span>
+                            <span>
+                                下单时间：2017.05.05   9:30
+                            </span>
+                        </div>
+                        <div class="orderMg-con clearfix">
+                            <div class="conLeft">
+                                <ul>
+                                    <li>
+                                        <span class="proImg">
+                                            <a href="">
+                                                <img src="images/produce03.jpg" alt="">
+                                            </a>
+                                        </span>
+                                        <span class="proName">
+                                            <a href="">水晶蒸饺</a>
+                                        </span>
+                                        <span class="proPrice">
+                                            ￥15.00
+                                        </span>
+                                        <span class="proNum">
+                                            <i>数量*</i>
+                                            1
+                                        </span>
+                                    </li>
+
+                                    <li>
+                                        <span class="proImg">
+                                            <a href="">
+                                                <img src="images/produce03.jpg" alt="">
+                                            </a>
+                                        </span>
+                                        <span class="proName">
+                                            <a href="">水晶蒸饺</a>
+                                        </span>
+                                        <span class="proPrice">
+                                            ￥15.00
+                                        </span>
+                                        <span class="proNum">
+                                            <i>数量</i>
+                                            1
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="comRight clearfix">
+                                <div class="totalPrice">
+                                    <span>
+                                        <i>实付款：</i>￥30.00
+                                    </span>
+                                    <span>
+                                        （含运费￥0.00）
+                                    </span>
+                                </div>
+                                <div class="static-wrap">
+                                    <span class="static">派送中</span>
+                                    <span class="orderDetail">
+                                        <span>订单详情</span>
+                                        <i class="iconfont">&#xe610;</i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="orderMg-detail clearfix">
+                            <p class="tips">订单详情</p>
+                            <div class="detailLeft">
+                                <p>
+                                    收货地址：广东省广州市海珠区新港西路135号新港西路近中山大学西门
+                                </p>
+                                <p>
+                                    收 件 人： 李小明
+                                </p>
+                                <p>
+                                    联系方式：12345678910
+                                </p>
+                            </div>
+                            <div class="detailRight">
+                                <p>
+                                    创建时间：2017-05-16  11:30
+                                </p>
+                                <p>
+                                    付款时间：017-05-16  11:30
+                                </p>
+                                <p>
+                                    送货店铺： 广东省 广州市 海珠区 新港店
+                                </p>
+                                <p>
+                                    联系方式：12345678910
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="orderMg-item">
+                        <div class="orderMg-info">
+                            <span>
+                                订单号：BFED2548626474545364
+                            </span>
+                            <span>
+                                下单时间：2017.05.05   9:30
+                            </span>
+                        </div>
+                        <div class="orderMg-con clearfix">
+                            <div class="conLeft">
+                                <ul>
+                                    <li>
+                                        <span class="proImg">
+                                            <a href="">
+                                                <img src="images/produce03.jpg" alt="">
+                                            </a>
+                                        </span>
+                                        <span class="proName">
+                                            <a href="">水晶蒸饺</a>
+                                        </span>
+                                        <span class="proPrice">
+                                            ￥15.00
+                                        </span>
+                                        <span class="proNum">
+                                            <i>数量*</i>
+                                            1
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="comRight clearfix">
+                                <div class="totalPrice">
+                                    <span>
+                                        <i>实付款：</i>￥30.00
+                                    </span>
+                                    <span>
+                                        （含运费￥0.00）
+                                    </span>
+                                </div>
+                                <div class="static-wrap">
+                                    <span class="static">等待配送</span>
+                                    <span class="orderDetail">
+                                        <span>订单详情</span>
+                                        <i class="iconfont">&#xe610;</i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="orderMg-detail clearfix">
+                            <p class="tips">订单详情</p>
+                            <div class="detailLeft">
+                                <p>
+                                    收货地址：广东省广州市海珠区新港西路135号新港西路近中山大学西门
+                                </p>
+                                <p>
+                                    收 件 人： 李小明
+                                </p>
+                                <p>
+                                    联系方式：12345678910
+                                </p>
+                            </div>
+                            <div class="detailRight">
+                                <p>
+                                    创建时间：2017-05-16  11:30
+                                </p>
+                                <p>
+                                    付款时间：017-05-16  11:30
+                                </p>
+                                <p>
+                                    送货店铺： 广东省 广州市 海珠区 新港店
+                                </p>
+                                <p>
+                                    联系方式：12345678910
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 底部 -->
+    <footer class="wrap">
+        <div class="container clearfix">
+            <div class="footLeft">
+                <a href=""><img src="images/footLogo.png" alt=""></a>
+                <img src="images/ewm.png" alt="" class="ewm">
+            </div>
+            <div class="footRight">
+                <p class="footLinks">
+                    <a href="javascript:;">
+                        光头佬官方微信
+                        <span class="ewmImg">
+                            <img src="images/ewm.png" alt="">
+                        </span>
+                    </a>
+                    <a href="http://guangtoulao.gtljm.com/">光头佬官方网站</a>
+                    <a href="http://www.gtljm.com">光头佬加盟网站</a>
+                </p>
+                <p class="footLinks">
+                    <a href="index.html">
+                        首页
+                    </a>
+                    <a href="vipCenter.html">会员中心</a>
+                    <a href="helpCenter.html">帮助中心</a>
+                </p>
+                <p class="joinTel">
+                    <img src="images/tel.png" alt="">
+                </p>
+                <p class="info">
+                    广州光头佬联圣贸易有限公司
+
+                </p>
+                <p class="info">
+                    &copy;2017 粤ICP备13066649号-1
+                </p>
+
+            </div>
+        </div>
+    </footer>
+    <script src="js/shopCar.js"></script>
+    <script>
+        //展开订单详情
+        $(function(){
+            var mark = true;
+            $('.orderDetail').on('click',function(){
+                if(mark){
+                    $(this).find('span').text('收起').next('i.iconfont').css({'transform':'rotateZ(180deg)'}).parents('.orderMg-item').find('.orderMg-detail').slideDown();
+                    mark = false;
+                }else{
+                    $(this).find('span').text('订单详情').next('i.iconfont').css({'transform':'rotateZ(0deg)'}).parents('.orderMg-item').find('.orderMg-detail').slideUp();
+                    mark = true;
+                }
+            });
+        })
+    </script>
+</body>
+</html>

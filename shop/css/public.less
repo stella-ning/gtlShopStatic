@@ -1,0 +1,478 @@
+@charset "UTF-8";
+@import 'var.less';
+/*---公共样式---*/
+.wrap{
+    width:100%;
+}
+a,a:active,a:hover,a:focus,a:visited{
+    text-decoration: none;
+}
+/*-----阿里图标引用----*/
+@font-face {
+  font-family: 'iconfont';  /* project id 303261 */
+  src: url('//at.alicdn.com/t/font_u6jbdbq1q4asv2t9.eot');
+  src: url('//at.alicdn.com/t/font_u6jbdbq1q4asv2t9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_u6jbdbq1q4asv2t9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_u6jbdbq1q4asv2t9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_u6jbdbq1q4asv2t9.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*--分页--*/
+.pagination-wrap{
+    position:relative;
+    width:100%;
+    .pagination{
+        position: static;
+        text-align:right;
+        li{
+            float:none;
+            display:inline-block;
+
+        }
+    }
+    .pagination>li>a, .pagination>li>span{
+        padding: 2px 6px;
+        color:@color-red;
+
+    }
+}
+
+header.wrap {
+    background:@color-white;
+    .head{
+        position:relative;
+        .nav li{
+            a{
+                color:@color-white;
+            }
+        }
+    }
+}
+
+/*--轮播图--*/
+.swiper-container{
+    width:100%;
+    overflow:hidden;
+    .swiper-wrapper .swiper-slide a{
+        display:block;
+        width:100%;
+        height:100%;
+        img{
+            width:100%;
+            height:100%;
+            max-width:100%;
+        }
+    }
+}
+.pagination{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    text-align:center;
+    width:100%;
+    z-index:10;
+}
+.swiper-pagination-switch{
+    display:inline-block;
+    background:@color-gray;
+    border-radius:50%;
+    transition: width .2s ease;
+    -moz-transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+    -o-transition: width .2s ease;
+
+
+}
+.swiper-active-switch{
+    background:@color-red;
+}
+
+/*----登录、注册表单公共样式---*/
+input[type=checkbox], input[type=radio]{
+    line-height: normal;
+    padding: 0;
+}
+input,input:active,button,button:active{
+    outline:none !important;
+}
+/*---单选框--*/
+.radio-wrap{
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-right: 8px;
+    .radio-inner-wrap{
+        outline: none;
+        line-height: 1;
+        vertical-align: text-bottom;
+        position: relative;
+        input{
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            cursor: pointer;
+            opacity: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+        input:checked ~ .radio-inner{
+            border-color: #108ee9;
+            &::after{
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                transform: scale(1);
+                opacity: 1;
+                -webkit-transition: all .3s cubic-bezier(.78,.14,.15,.86);
+                transition: all .3s cubic-bezier(.78,.14,.15,.86);
+            }
+        }
+        .radio-inner{
+            position: relative;
+            top: -1px;
+            left: 0;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 14px;
+            border: 1px solid #d9d9d9;
+            background-color: #fff;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+            margin-right:3px;
+            &:after{
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                left: 3px;
+                top: 3px;
+                border-radius: 4px;
+                display: table;
+                border-top: 0;
+                border-left: 0;
+                content: " ";
+                background-color: #108ee9;
+                opacity: 0;
+                -webkit-transform: scale(0);
+                -ms-transform: scale(0);
+                transform: scale(0);
+                -webkit-transition: all .3s cubic-bezier(.78,.14,.15,.86);
+                transition: all .3s cubic-bezier(.78,.14,.15,.86);
+            }
+        }
+    }
+}
+/*--多选框--*/
+.check-wrap{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    margin-right:8px;
+    font-size:12px;
+    a{
+        color:@color-red;
+        font-weight: bold;
+    }
+    .checkbox-inner-wrap{
+        white-space: nowrap;
+        cursor: pointer;
+        outline: none;
+        display: inline-block;
+        line-height: 1;
+        position: relative;
+        vertical-align: text-bottom;
+        input{
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+        input:checked ~ .checkbox-inner{
+            background-color: @color-red;
+            border-color: @color-red;
+            &:after{
+                -webkit-transform: rotate(45deg) scale(1);
+                -ms-transform: rotate(45deg) scale(1);
+                transform: rotate(45deg) scale(1);
+                position: absolute;
+                left: 4px;
+                top: 1px;
+                display: table;
+                width: 5px;
+                height: 8px;
+                border: 2px solid #fff;
+                border-top: 0;
+                border-left: 0;
+                content: " ";
+                -webkit-transition: all .2s cubic-bezier(.12,.4,.29,1.46) .1s;
+                transition: all .2s cubic-bezier(.12,.4,.29,1.46) .1s;
+            }
+        }
+        .checkbox-inner{
+            position: relative;
+            top: -1px;
+            left: 0;
+            display: block;
+            width: 14px;
+            height: 14px;
+            border: 1px solid #d9d9d9;
+            border-radius: 2px;
+            background-color: #fff;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+            &:after{
+                -webkit-transform: rotate(45deg) scale(0);
+                -ms-transform: rotate(45deg) scale(0);
+                transform: rotate(45deg) scale(0);
+                position: absolute;
+                left: 4px;
+                top: 1px;
+                display: table;
+                width: 5px;
+                height: 8px;
+                border: 2px solid #fff;
+                border-top: 0;
+                border-left: 0;
+                content: " ";
+                -webkit-transition: all .1s cubic-bezier(.71,-.46,.88,.6);
+                transition: all .1s cubic-bezier(.71,-.46,.88,.6);
+            }
+        }
+    }
+
+}
+.form-box{
+    margin-top:5%;
+    margin-bottom:50px;
+    .top-tips{
+        width:100%;
+        text-align:center;
+        .title{
+            color:@color-red;
+        }
+        .tips{
+            color:#777;
+        }
+    }
+    select.form-control{
+        display:inline-block;
+    }
+    .control-label{
+        padding-bottom:7px;
+        height:34px;
+    }
+    .checkbox,.radio{
+        padding-top:0px;
+    }
+
+    .radio{
+        line-height:35px;
+    }
+    .form-control{
+        background-color:#fff!important;
+
+    }
+
+    .Moblieyzm{
+        a{
+            display:block;
+            width:100%;
+            height:25px;
+            line-height:25px;
+            text-align:center;
+            margin-top:5px;
+            background:@color-red;
+            color:#fff;
+            font-size:14px;
+            border:none;
+            border-radius: 3px;
+        }
+    }
+    .valid_message{
+        display:block;
+        text-align:center;
+        color:#a94442;
+        margin-right:-74%;
+    }
+    .res{
+        font-size:12px;
+        color:@color-red;
+        padding-right:20px;
+        text-decoration: underline;
+    }
+    .yzm,.Moblieyzm{
+        padding-left:0;
+        padding-right:30px;
+        height:34px;
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+    .button{
+        text-align: center;
+        button{
+            padding:7px 30px;
+            background:@color-red;
+            border-color:@color-red;
+            color:#fff;
+            border-radius:3px;
+        }
+    }
+}
+@media only screen and (min-width: 1200px){
+    .form-box{
+        width:60%;
+        margin:50px auto;
+        .top-tips{
+            margin:20px auto;
+            .title{
+                font-size:24px;
+            }
+            .tips{
+                font-size:14px;
+            }
+        }
+        select.form-control{
+            width:31%;
+            margin-right:1.5%;
+            &:last-child{
+                margin-right:0;
+            }
+        }
+        .button{
+            margin-top:30px;
+        }
+    }
+
+    .successTips{
+        margin:150px auto;
+        .tips{
+            span{
+                font-size:24px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 640px){
+    .form-box{
+        width:100%;
+        margin:1vh auto;
+        overflow:hidden;
+        .valid_message {
+            margin-right:-45%;
+        }
+        .top-tips{
+            margin:1rem auto 2rem;
+            .title{
+                font-size:18px;
+            }
+            .tips{
+                font-size:12px;
+            }
+        }
+        .col-xs-9{
+            padding:0 20px 0 10px;
+        }
+        .formTime{
+            display:none;
+        }
+        .form-group{
+            margin:0 0 15px;
+        }
+        .form-control{
+            box-sizing: border-box;
+            width:98%;
+
+        }
+        .control-label{
+            text-align:right;
+            padding-bottom:0;
+            padding-right:0;
+            padding-left:0;
+
+        }
+        select.form-control{
+            width:32%;
+        }
+        .formLine{
+            display:none;
+        }
+        .button{
+            margin-bottom:1.5rem;
+        }
+    }
+
+    .successTips{
+        margin:5rem auto;
+        .tips{
+            span{
+                font-size:24px;
+            }
+        }
+    }
+}
+
+/*---成功登录提醒页面---*/
+.successTips{
+    .container{
+        text-align:center;
+        .tips{
+            span{
+                color:@color-red;
+            }
+        }
+        .to{
+
+            margin-top:30px;
+            a{
+                color:#fff;
+                padding:10px 30px;
+                background: @color-red;
+                font-size:16px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/*--改变select选择框的默认样式---*/
+select {
+  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+  border: solid 1px @color-gray;
+
+  /*很关键：将默认的select选择框样式清除*/
+  // appearance:none;
+  // -moz-appearance:none;
+  // -webkit-appearance:none;
+
+  /*在选择框的最右侧中间显示小箭头图片*/
+    background-image: url("../images/select-arrow.png") no-repeat right center;
+  background-color:@color-white;
+
+
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  padding-right: 14px;
+}
+
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+//select::-ms-expand { display: none; }

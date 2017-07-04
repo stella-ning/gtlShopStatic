@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no，minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9;IE=EmulateIE10; IE=EmulateIE11">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="Author" content="Calvin,stella-ning">
+	<title>我的订单</title>
+    <link rel="shortcut icon" href="images/PClogo.png">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" media="screen and (min-width:980px)" href="css/pc.css"><!--大于980px的时候-->
+	<link rel="stylesheet" media="screen and (max-width:780px)" href="css/mobile.css"><!--手机的时候-->
+	<script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/rem.js"></script>
+	<script src="js/idangerous.swiper2.7.6.min.js"></script>
+	<script src="js/index.js"></script>
+    <script src="js/carfly.js"></script>
+    <script src="js/shopCar.js"></script>
+    <script src="js/formValid.js"></script>
+    <script src="js/form.js"></script>
+
+    <!-- <!–[if lt IE 9]>
+        <script src=”http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js”></script>
+    <![endif]–> -->
+</head>
+
+<body>
+
+	<!-- 头部 -->
+	<header class="wrap">
+		<div class="head container clearfix">
+			<div class="logo fl">
+				<a href=""><img src="images/logo.png" alt="" ></a>
+			</div>
+            <div class="openNav" id="openNav">
+                <img src="images/navIcon.png" alt="">
+            </div>
+            <div class="nav-wrap fr">
+                <div class="login">
+                    <a href="login.html">登录</a>
+                    <a href="register.html">注册</a>
+                </div>
+                <ul class="headNav" id="nav">
+    				<li ><a href="index.html">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+    				<li><a href="vipCenter.html">会员中心</a></li>
+    				<li class="hover"><a href="helpCenter.html">帮助中心</a></li>
+                    <li><a href="http://guangtoulao.gtljm.com/">官方网站</a></li>
+                    <li><a href="http://www.gtljm.com">加盟网站</a></li>
+                </ul>
+    		</div>
+            <div class="last">
+                <a href="myShopCar.html">
+                    <span class="shopCarIcon">
+                        <!-- 上标 -->
+                        <sup>3</sup>
+                    </span>
+                </a>
+                <div class="shopCar-wrap"  onselectstart="return false;">
+                    <p class="notes">最新加入的商品</p>
+                    <div class="shopCarList">
+                        <div class="carList-box">
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="1" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="1" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="1" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="summary clearfix">
+                            <div class="sumLeft fl">
+                                <p>
+                                    共
+                                    <strong class="shopTotal">0</strong>
+                                    件商品
+                                </p>
+                                <p>
+                                    共计￥
+                                    <strong class="shopTprice">0.00</strong>
+                                </p>
+                            </div>
+                            <div class="sumRight fr">
+                                <a href="">进入结算</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+	</header>
+
+    <!-- 我的订单 -->
+    <section class="wrap vipCenter-wrap">
+        <div class="container clearfix">
+            <div class="helpNav">
+                <a href="vipCenter.html">账号信息</a>
+                <a href="orderMg.html">我的订单</a>
+                <a class="hover"  href="addressAdmin.html">地址管理</a>
+                <a href="security.html">账号安全</a>
+                <a href="aboutUser.html">关于会员</a>
+            </div>
+            <div class="vipCenter">
+                <div class="title">
+                    新增/编辑地址
+                </div>
+                <section class="form-box newAddress">
+                    <form class="form-horizontal" role="form" action="" id="FormDate">
+                        <div class="form-group">
+                            <label class="control-label">所在地区：</label>
+                            <div class="control-con select-control">
+                                <select class="form-control required" id="s-province" name="province" data-valid="isNonEmpty" date-tip = "请选择省份" data-error="请选择省份">
+                                    <option value="">请选择省</option>
+                                    <option value="1">广东省</option>
+                                </select>
+                                <select class="form-control  required" id="s-city" name="city" data-valid="isNonEmpty" date-tip = "请选择城市" data-error="请选择城市">
+                                    <option value="">请选择市</option>
+                                </select>
+                                <select class="form-control required" id="s-county" name="county" data-valid="isNonEmpty" date-tip = "请选择地区" data-error="请选择地区">
+                                    <option value="">请选择区/县</option>
+                                </select>
+                                <select class="form-control required" id="s-street" name="street" data-valid="isNonEmpty" date-tip = "请选择街道" data-error="请选择街道">
+                                    <option value="">请选择街道</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">详细地址：</label>
+                            <div class="control-con">
+                                <textarea class="form-control required" data-valid="isNonEmpty" date-tip = "请输入您的详细地址" data-error="请输入您的详细地址">建议您如实填写详细收货地址，例如街道名称，门牌号码，楼层，房间号等信息
+                                </textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">收件人：</label>
+                            <div class="control-con">
+                                <input type="text" name="user"  class="form-control required"  placeholder="收件人的姓名" data-valid="isNonEmpty" date-tip = "请输入您的收件人" data-error="请输入您的收件人姓名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">手机号：</label>
+                            <div class="control-con">
+                                <input type="text" name="user"  class="form-control required" placeholder="手机号码" data-valid="isNonEmpty||isMobile" date-tip = "请输入您的手机号码" data-error="请输入您的手机号码||请输入合法手机号码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label labelhide">  </label>
+                            <div class="control-con">
+                                <label for="hoby" class="check-wrap">
+                                    <span class="checkbox-inner-wrap">
+                                        <input type="checkbox" id="hoby">
+                                        <span class="checkbox-inner"></span>
+                                    </span>
+                                    <span class="text">设置为默认地址</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="button">
+                                <button type="submit" class="btn">保存</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 底部 -->
+    <footer class="wrap">
+        <div class="container clearfix">
+            <div class="footLeft">
+                <a href=""><img src="images/footLogo.png" alt=""></a>
+                <img src="images/ewm.png" alt="" class="ewm">
+            </div>
+            <div class="footRight">
+                <p class="footLinks">
+                    <a href="javascript:;">
+                        光头佬官方微信
+                        <span class="ewmImg">
+                            <img src="images/ewm.png" alt="">
+                        </span>
+                    </a>
+                    <a href="http://guangtoulao.gtljm.com/">光头佬官方网站</a>
+                    <a href="http://www.gtljm.com">光头佬加盟网站</a>
+                </p>
+                <p class="footLinks">
+                    <a href="index.html">
+                        首页
+                    </a>
+                    <a href="vipCenter.html">会员中心</a>
+                    <a href="helpCenter.html">帮助中心</a>
+                </p>
+                <p class="joinTel">
+                    <img src="images/tel.png" alt="">
+                </p>
+                <p class="info">
+                    广州光头佬联圣贸易有限公司
+
+                </p>
+                <p class="info">
+                    &copy;2017 粤ICP备13066649号-1
+                </p>
+
+            </div>
+        </div>
+    </footer>
+    <script src="js/shopCar.js"></script>
+    <script>
+        $('#s-province').on('click',function(){
+            console.log('点击获取省份数据');
+        })
+        $('#s-province').on('change',function(){
+            alert('change');
+        });
+
+    </script>
+</body>
+</html>

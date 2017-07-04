@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="Author" content="Calvin,stella-ning">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=yes"/>
+    <meta name="msapplication-tap-highlight" content="no" />
+	<title>修改资料</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" media="only screen and (min-width:980px) and (max-width:1960px)" href="css/pc.css">
+	<link rel="stylesheet" media="only screen and (min-width:320px) and (max-width:780px)" href="css/mobile.css">
+
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/rem.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/formValid.js"></script>
+    <script src="js/form.js"></script>
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="wrap">
+        <div class="head container clearfix">
+            <p class="head-title fl">光头佬联圣订单管理系统</p>
+            <span class="fr openNav"></span>
+            <nav class="topNw">
+                <ul class="topN">
+                    <li ><a href="index.html">首页</a></li>
+                    <li class="active"><a href="orderManage.html">订单管理</a></li>
+                    <li><a href="newOrder.html">新订单</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="wrap Login">
+        <form class="form-horizontal"  action="" id="FormDate">
+            <div class="top-tips">
+                <div class="title">欢迎登陆光头佬联圣订单系统</div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">账户：</label>
+                <div class="control-con">
+                    <input type="text"  class="form-control required" value="手机号码" placeholder="手机号码" data-valid="isNonEmpty||isMobile" date-tip = "请输入您的手机号码" data-error="请输入您的手机号码||请输入合法手机号码">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">密码：</label>
+                <div class="control-con">
+                    <input type="password"  class="form-control required" value="" placeholder="密码必须为6-16位字符" data-valid="isNonEmpty||isPassword" date-tip = "请输入您的密码||密码必须为6-16位字符" data-error="请输入您的密码||密码必须为6-16位字符">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label labelhide">  </label>
+                <div class="control-con">
+                    <a class="res" href="forget.html">忘记密码？</a>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="button">
+                    <button type="submit" class="btn">登录</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+
+
+</body>
+</html>

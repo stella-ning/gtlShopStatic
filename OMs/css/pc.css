@@ -1,0 +1,380 @@
+@charset "UTF-8";
+.wrap .container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 150px;
+}
+/*---头部---*/
+header.wrap {
+  height: 60px;
+}
+header.wrap .head {
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+}
+header.wrap .head .head-title {
+  font-size: 24px;
+}
+header.wrap .head .openNav {
+  display: none;
+}
+header.wrap .head .topNw {
+  float: right;
+  height: 60px;
+  line-height: 60px;
+}
+header.wrap .head .topNw ul.topN li {
+  height: 60px;
+  line-height: 60px;
+  float: left;
+  font-size: 16px;
+}
+header.wrap .head .topNw ul.topN li a {
+  display: block;
+  color: #000000;
+  background: #fff;
+  padding: 0 25px;
+}
+header.wrap .head .topNw ul.topN li:hover a,
+header.wrap .head .topNw ul.topN li.active a {
+  background: #0793eb;
+  color: #ffffff;
+}
+/*----用户信息----*/
+.infomations {
+  height: 155px;
+  color: #fff;
+}
+.infomations .container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.infomations .container .info-con {
+  float: left;
+}
+.infomations .container .info-con .name {
+  font-size: 20px;
+  padding-top: 15px;
+}
+.infomations .container .info-con .tel,
+.infomations .container .info-con address {
+  font-size: 16px;
+}
+.infomations .container .edit {
+  float: right;
+  margin-right: 50px;
+  margin-top: 30px;
+}
+.infomations .container .edit a {
+  font-size: 16px;
+  color: #fff;
+}
+.infomations .container .edit a:hover {
+  text-decoration: none;
+}
+/*--首页导航--*/
+nav.wrap {
+  margin-top: 30px;
+}
+nav.wrap .container .nav-list {
+  margin: 0 50px;
+}
+nav.wrap .container .nav-list li {
+  float: left;
+  width: 50%;
+  height: 100px;
+  text-align: center;
+  background: #fff;
+}
+nav.wrap .container .nav-list li:nth-child(2n) {
+  border-left: 1px solid #ddd;
+}
+nav.wrap .container .nav-list li:hover {
+  background: #fcf5eb;
+}
+nav.wrap .container .nav-list li a {
+  display: block;
+  color: #000;
+}
+nav.wrap .container .nav-list li a .con {
+  padding: 20px;
+}
+nav.wrap .container .nav-list li a .con .text {
+  font-size: 18px;
+}
+nav.wrap .container .nav-list li a .con .num {
+  font-size: 16px;
+  color: #0487be;
+}
+/*-----------------------分割线---------------------------*/
+/*---订单管理---*/
+.tip {
+  display: none;
+  width: 100%;
+  height: 50px;
+  background: #ffffff;
+}
+.tip .container .toBack {
+  display: none;
+}
+.tip .container .to-orderList {
+  display: block;
+  float: right;
+  color: #000;
+  font-size: 16px;
+  line-height: 50px;
+}
+.tip .container span {
+  display: block;
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #0793eb;
+  color: #ffffff;
+  font-size: 18px;
+}
+.orderList {
+  margin-top: 30px;
+}
+.orderList .container .orderList-con .listItem {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 15px;
+  background: #fff;
+  font-size: 12px;
+  color: #000;
+  padding-left: 15px;
+}
+.orderList .container .orderList-con .listItem .listItem-con li {
+  float: left;
+  margin-right: 5px;
+}
+.orderList .container .orderList-con .listItem .listItem-con li:last-child {
+  margin-right: 0;
+  width: 15%;
+}
+.orderList .container .orderList-con .listItem .listItem-con li:nth-child(1),
+.orderList .container .orderList-con .listItem .listItem-con li:nth-child(2) {
+  width: 29%;
+}
+.orderList .container .orderList-con .listItem .listItem-con li:nth-child(3) {
+  width: 25%;
+}
+/*-----------------------分割线---------------------------*/
+/*---新订单---*/
+.newOrder {
+  margin-top: 30px;
+}
+.newOrder .container .newOrderList {
+  width: 100%;
+  background: #fff;
+  margin-bottom: 15px;
+}
+.newOrder .container .newOrderList .listHead {
+  height: 40px;
+  background: #ddd;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+}
+.newOrder .container .newOrderList .listHead .order-info {
+  width: 65%;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+}
+.newOrder .container .newOrderList .listHead .order-info p {
+  float: left;
+  width: 50%;
+  padding-right: 15px;
+}
+.newOrder .container .newOrderList .listHead .order-money {
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  color: #f69292;
+}
+.newOrder .container .newOrderList .listHead .order-handle {
+  margin: 5px 30px;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #0792ea;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.newOrder .container .newOrderList .listDel {
+  padding: 10px;
+}
+.newOrder .container .newOrderList .listDel .userInfo {
+  float: left;
+  width: 65%;
+  color: #666;
+}
+.newOrder .container .newOrderList .listDel .userInfo p span {
+  display: block;
+  margin-bottom: 10px;
+}
+.newOrder .container .newOrderList .listDel .listInfo {
+  float: right;
+  width: 35%;
+}
+.newOrder .container .newOrderList .listDel .listInfo ul li {
+  width: 100%;
+}
+.newOrder .container .newOrderList .listDel .listInfo ul li span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.newOrder .container .newOrderList .listDel .listInfo ul li .footName {
+  width: 60%;
+}
+.newOrder .container .newOrderList .listDel .listInfo ul li .footPrice {
+  width: 35%;
+}
+/*-----------------------分割线---------------------------*/
+/*---修改用户资料---*/
+.userInfoEdit {
+  margin-top: 30px;
+}
+.userInfoEdit .container {
+  background: #ffffff;
+}
+.userInfoEdit .container .form-horizontal {
+  width: 500px;
+  margin: 20px auto;
+}
+.userInfoEdit .container .form-horizontal p {
+  font-size: 16px;
+  line-height: 35px;
+  text-align: center;
+}
+.userInfoEdit .container .form-horizontal .tip {
+  padding: 0;
+  height: auto !important;
+}
+.userInfoEdit .container .form-horizontal .tip span.valid_message {
+  display: none;
+  height: 0 !important;
+}
+.userInfoEdit .container .form-horizontal .form-group {
+  width: 400px;
+  margin: 0 auto 20px;
+}
+.userInfoEdit .container .form-horizontal .form-group .formIp {
+  display: inline-block;
+  width: 100%;
+}
+.userInfoEdit .container .form-horizontal .form-group .formIp .code {
+  display: inline-block;
+  width: 55%;
+  margin-right: 2%;
+}
+.userInfoEdit .container .form-horizontal .form-group .formIp .getCode {
+  display: inline-block;
+  width: 40%;
+  height: 35px;
+  line-height: 35px;
+  background: #0792ea;
+}
+.userInfoEdit .container .form-horizontal .form-group .formIp .getCode a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+.userInfoEdit .container .form-horizontal .form-group .button {
+  text-align: center;
+  margin-top: 30px;
+}
+.userInfoEdit .container .form-horizontal .form-group .button .btn {
+  width: 105px;
+  background: #0792ea;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+}
+/*-----------------------分割线---------------------------*/
+/*---订单详情---*/
+.orderDetail {
+  margin-top: 30px;
+}
+.orderDetail .container .orderNb {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #ddd;
+  padding-left: 20px;
+}
+.orderDetail .container .orderNb span {
+  font-size: 12px;
+  color: #000;
+  font-weight: bold;
+  padding-right: 30px;
+}
+.orderDetail .container .order-com {
+  width: 100%;
+  background: #fff;
+}
+.orderDetail .container .order-com ul {
+  vertical-align: middle;
+}
+.orderDetail .container .order-com ul li {
+  display: inline-block;
+  padding: 5px;
+  font-size: 12px;
+  vertical-align: middle;
+  font-weight: bold;
+}
+.orderDetail .container .order-com ul li p {
+  margin-bottom: 5px;
+}
+.orderDetail .container .order-com ul li.userInfo {
+  width: 34%;
+}
+.orderDetail .container .order-com ul li.userInfo p {
+  padding-left: 10px;
+}
+.orderDetail .container .order-com ul li.userInfo p span {
+  display: block;
+  line-height: 25px;
+}
+.orderDetail .container .order-com ul li.order {
+  width: 30%;
+  font-weight: normal;
+}
+.orderDetail .container .order-com ul li.order p {
+  clear: both;
+}
+.orderDetail .container .order-com ul li.order p span:nth-child(1) {
+  float: left;
+  padding-left: 15px;
+}
+.orderDetail .container .order-com ul li.order p span:nth-child(2) {
+  float: right;
+  padding-right: 15px;
+}
+.orderDetail .container .order-com ul li.pay {
+  width: 18%;
+}
+.orderDetail .container .order-com ul li.pay p:nth-child(1) span:nth-child(2) {
+  font-size: 16px;
+  color: #f69292;
+}
+.orderDetail .container .order-com ul li.status {
+  width: 15%;
+}
+.orderDetail .container .order-com ul li.status .btn-primary {
+  margin-top: 10px;
+  background: #0793eb;
+  border: 1px solid #0793eb;
+  padding: 3px 15px;
+  outline: none;
+}

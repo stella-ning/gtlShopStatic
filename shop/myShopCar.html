@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no，minimum-scale=1.0">
+	<!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9;IE=EmulateIE10; IE=EmulateIE11">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="Author" content="Calvin,stella-ning">
+	<title>光头佬联圣总部唯一指定官网</title>
+    <link rel="shortcut icon" href="images/PClogo.png">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="css/idangerous.swiper.css"> -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" media="screen and (min-width:980px)" href="css/pc.css"><!--大于980px的时候-->
+	<link rel="stylesheet" media="screen and (max-width:780px)" href="css/mobile.css"><!--手机的时候-->
+	<script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/rem.js"></script>
+	<script src="js/idangerous.swiper2.7.6.min.js"></script>
+	<script src="js/index.js"></script>
+    <script src="js/shopCar.js"></script>
+    <script src="js/formValid.js"></script>
+    <script src="js/form.js"></script>
+    <!-- <!–[if lt IE 9]>
+        <script src=”http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js”></script>
+    <![endif]–> -->
+</head>
+
+<body>
+
+    <!-- 头部 -->
+    <header class="wrap">
+        <div class="head container clearfix">
+            <div class="logo fl">
+                <a href=""><img src="images/logo.png" alt="" ></a>
+            </div>
+            <div class="openNav" id="openNav">
+                <img src="images/navIcon.png" alt="">
+            </div>
+            <div class="nav-wrap fr">
+                <div class="login">
+                    <a href="login.html">登录</a>
+                    <a href="register.html">注册</a>
+                </div>
+                <ul class="headNav" id="nav">
+                    <li class="hover"><a href="index.html">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+                    <li><a href="vipCenter.html">会员中心</a></li>
+                    <li><a href="helpCenter.html">帮助中心</a></li>
+                    <li><a href="http://guangtoulao.gtljm.com/">官方网站</a></li>
+                    <li><a href="http://www.gtljm.com">加盟网站</a></li>
+                </ul>
+            </div>
+            <div class="last moblieLogin" >
+                <a href="myShopCar.html">
+                    <span class="shopCarIcon">
+                        <!-- 上标 -->
+                        <sup>3</sup>
+                    </span>
+                </a>
+                <div class="shopCar-wrap"  onselectstart="return false;">
+                    <p class="notes">最新加入的商品</p>
+                    <div class="shopCarList">
+                        <div class="carList-box">
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="1" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="2" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="1" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="summary clearfix">
+                            <div class="sumLeft fl">
+                                <p>
+                                    共
+                                    <strong class="shopTotal">0</strong>
+                                    件商品
+                                </p>
+                                <p>
+                                    共计￥
+                                    <strong class="shopTprice">0.00</strong>
+                                </p>
+                            </div>
+                            <div class="sumRight fr">
+                                <a href="accounted.html">进入结算</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <section class="wrap  shoppingCart-wrap">
+        <div class="container">
+            <div class="shoppingCart" id="shoppingCart" onselectstart="return false;">
+                <p class="notes">我的购物车</p>
+                <div class="shoppingCartCon">
+                    <div class="carList-box">
+                        <dl class="shoppingCartList thead clearfix">
+                            <label class="check-wrap fl">
+                                <span class="checkbox-inner-wrap">
+                                    <input type="checkbox" name="all">
+                                    <span class="checkbox-inner"></span>
+                                </span>
+                                <span>全选</span>
+                            </label>
+                            <dd class="shopinfo">
+                                <span>商品信息</span>
+                            </dd>
+                            <dd class="unitprice">
+                                <span>单价</span>
+                            </dd>
+                            <dd class="shopCount">
+                                <span>数量</span>
+                            </dd>
+                            <!-- 产品数量*价格 -->
+                            <dd class="priceTotal">
+                                <span>金额</span>
+                            </dd>
+                            <dd class="shopOperate">
+                                <span>操作</span>
+                            </dd>
+                        </dl>
+                        <dl class="shoppingCartList clearfix" id="shop01">
+                            <label class="check-wrap fl">
+                                <span class="checkbox-inner-wrap">
+                                    <input type="checkbox" name="item">
+                                    <span class="checkbox-inner"></span>
+                                </span>
+                            </label>
+                            <dd class="shopinfo">
+                                <span class="proImg">
+                                    <img src="images/produce01.jpg" alt="">
+                                </span>
+                                <span class="proName">
+                                    <a href="produceDetail.html">糯米粽子糯米粽子</a>
+                                </span>
+                                <span class="proWeight">净含量：500g</span>
+                            </dd>
+                            <dd class="unitprice">
+                                ￥
+                                <span>15.00</span>
+                            </dd>
+                            <dd class="shopCount">
+                                <div class="count">
+                                    <a href="javascript:;" class="sub" onclick="regulation(this)">-</a>
+                                    <input name="count[0]" value="1" readonly>
+                                    <a href="javascript:;" class="add" onclick="regulation(this)">+</a>
+                                </div>
+                            </dd>
+                            <!-- 产品数量*价格 -->
+                            <dd class="priceTotal">
+                                ￥
+                                <span>15.00</span>
+                            </dd>
+                            <dd class="shopOperate">
+                                <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                            </dd>
+                        </dl>
+                        <dl class="shoppingCartList clearfix" id="shop02">
+                            <label class="check-wrap fl">
+                                <span class="checkbox-inner-wrap">
+                                    <input type="checkbox" name="item">
+                                    <span class="checkbox-inner"></span>
+                                </span>
+                            </label>
+                            <dd class="shopinfo">
+                                <span class="proImg">
+                                    <img src="images/produce01.jpg" alt="">
+                                </span>
+                                <span class="proName">
+                                    <a href="produceDetail.html">糯米粽子糯米粽子</a>
+                                </span>
+                                <span class="proWeight">净含量：500g</span>
+                            </dd>
+                            <dd class="unitprice">
+                                ￥
+                                <span>15.00</span>
+                            </dd>
+                            <dd class="shopCount">
+                                <div class="count">
+                                    <a href="javascript:;" class="sub" onclick="regulation(this)">-</a>
+                                    <input name="count[0]" value="1" readonly>
+                                    <a href="javascript:;" class="add" onclick="regulation(this)">+</a>
+                                </div>
+                            </dd>
+                            <!-- 产品数量*价格 -->
+                            <dd class="priceTotal">
+                                ￥
+                                <span>15.00</span>
+                            </dd>
+                            <dd class="shopOperate">
+                                <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="totaled clearfix">
+                        <label class="check-wrap fl">
+                            <span class="checkbox-inner-wrap">
+                                <input type="checkbox" name="all">
+                                <span class="checkbox-inner"></span>
+                            </span>
+                            <span>全选</span>
+                        </label>
+                        <div class="totaledLeft">
+                            <p>
+                                已选择商品
+                                <strong class="totaledCount">0</strong>
+                                件
+                            </p>
+                            <p>
+                                合计（不含运费）
+                                <span>
+                                    ￥
+                                    <strong class="totaledPrice">0.00</strong>
+                                </span>
+
+                            </p>
+                        </div>
+                        <div class="totaledRight">
+                            <a href="accounted.html">结算</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- 底部 -->
+    <footer class="wrap">
+        <div class="container clearfix">
+            <div class="footLeft">
+                <a href=""><img src="images/footLogo.png" alt=""></a>
+                <img src="images/ewm.png" alt="" class="ewm">
+            </div>
+            <div class="footRight">
+                <p class="footLinks">
+                    <a href="javascript:;">
+                        光头佬官方微信
+                        <span class="ewmImg">
+                            <img src="images/ewm.png" alt="">
+                        </span>
+                    </a>
+                    <a href="http://guangtoulao.gtljm.com/">光头佬官方网站</a>
+                    <a href="http://www.gtljm.com">光头佬加盟网站</a>
+                </p>
+                <p class="footLinks">
+                    <a href="index.html">
+                        首页
+                    </a>
+                    <a href="vipCenter.html">会员中心</a>
+                    <a href="helpCenter.html">帮助中心</a>
+                </p>
+                <p class="joinTel">
+                    <img src="images/tel.png" alt="">
+                </p>
+                <p class="info">
+                    广州光头佬联圣贸易有限公司
+
+                </p>
+                <p class="info">
+                    &copy;2017 粤ICP备13066649号-1
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 购物车增减
+        function regulation(_this){
+            var count = $(_this).parent().find("input")[0],
+                $id = $(_this).parents('.shoppingCartList').attr('id');
+                //alert($id);
+
+            //用来判断当前代理对象是否包含add
+            if($(_this).hasClass("add")){
+                count.value++;
+            }else{
+                count.value=(count.value==1?1:count.value-1);
+            }
+            operateAjax(
+                'data.json',
+                {num:count.value,id:$id},
+                function(){
+                    alert('操作成功');
+                }
+            );
+            // $.ajax({
+            //     url:'data.json',
+            //     type:'post',
+            //     data:{num:count.value,id:$id},
+            //     success:function(){
+            //         //alert(12);
+            //     }
+            // })
+            //改变总价格
+            var $row = $(_this).parents(".shoppingCartList");
+            var total = Number($row.find('.unitprice span').text()*count.value);
+            total = total.toFixed(2);
+            $row.find(".priceTotal span").text(total);
+            shoppingCountTotal()
+        }
+
+        //选中的产品
+        $('#shoppingCart .shoppingCartCon .shoppingCartList .check-wrap input[type=checkbox][name=item]').on('change',function(){
+            var $id = $(this).parents('.shoppingCartList').attr('id');
+            operateAjax(
+                'data.json',
+                {id:$id},
+                function(){
+                    alert('已选择商品');
+                }
+            );
+            shoppingCountTotal();
+        });
+        //全选
+        $('input[type=checkbox][name=all]').on('change',function(){
+            var $id = $(this).parents('.shoppingCartList').attr('id');
+            $('#shoppingCart .shoppingCartCon .shoppingCartList .check-wrap input[type=checkbox][name=item]').prop('checked',this.checked);
+            shoppingCountTotal();
+            operateAjax(
+                'data.json',
+                {id:$id},
+                function(){
+                    alert('成功选择全部');
+                }
+            )
+        });
+        //删除商品
+        function DeleteBtn(_this){
+            var $id = $(_this).parents('.shoppingCartList').attr('id');
+            operateAjax(
+                'data.json',
+                {id:$id},
+                function(){
+                    alert('成功删除');
+                }
+            )
+
+            $(_this).parents("dl").remove();//remove就是移除dom
+            num = Number($(".shopCarIcon sup").text());
+            //改变购物车的数量
+            num -= 1;
+            $(".shopCarIcon sup").text(num);
+            countTotal();
+        }
+
+
+        //就是根据当前被选中了的商品，动态的累加所有的值
+        function shoppingCountTotal(){
+            var total = 0;
+            var count = $('#shoppingCart .shoppingCartCon .shoppingCartList .check-wrap input[name=item]:checked').each(function(){
+                total+=Number($(this).parents('.shoppingCartList').find('.priceTotal span').text());
+            }).size();
+            $('.totaledLeft .totaledCount').text(count);
+            $('.totaledLeft .totaledPrice' ).text(total.toFixed(2));
+            if(count ===$('#shoppingCart .shoppingCartCon .shoppingCartList .check-wrap input[name=item]').length){
+                $('input[type=checkbox][name=all]').prop('checked',true);
+            }else{
+                $('input[type=checkbox][name=all]').prop('checked',false);
+            }
+        }
+        //ajax请求函数封装
+        function operateAjax(url,data,fn){
+            $.ajax({
+                url:url,
+                type:'post',
+                data:data,
+                success:fn
+            })
+        }
+    </script>
+</body>
+</html>

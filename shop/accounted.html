@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no，minimum-scale=1.0">
+	<!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9;IE=EmulateIE10; IE=EmulateIE11">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="Author" content="Calvin,stella-ning">
+	<title>光头佬联圣总部唯一指定官网</title>
+    <link rel="shortcut icon" href="images/PClogo.png">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" media="screen and (min-width:980px)" href="css/pc.css"><!--大于980px的时候-->
+	<link rel="stylesheet" media="screen and (max-width:780px)" href="css/mobile.css"><!--手机的时候-->
+	<script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/rem.js"></script>
+	<script src="js/idangerous.swiper2.7.6.min.js"></script>
+	<script src="js/index.js"></script>
+    <script src="js/shopCar.js"></script>
+    <!-- <!–[if lt IE 9]>
+        <script src=”http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js”></script>
+    <![endif]–> -->
+</head>
+
+<body>
+
+    <!-- 头部 -->
+    <header class="wrap">
+        <div class="head container clearfix">
+            <div class="logo fl">
+                <a href=""><img src="images/logo.png" alt="" ></a>
+            </div>
+            <div class="openNav" id="openNav">
+                <img src="images/navIcon.png" alt="">
+            </div>
+            <div class="nav-wrap fr">
+                <div class="login">
+                    <a href="login.html">登录</a>
+                    <a href="register.html">注册</a>
+                </div>
+                <ul class="headNav" id="nav">
+                    <li class="hover"><a href="index.html">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+                    <li><a href="vipCenter.html">会员中心</a></li>
+                    <li><a href="helpCenter.html">帮助中心</a></li>
+                    <li><a href="http://guangtoulao.gtljm.com/">官方网站</a></li>
+                    <li><a href="http://www.gtljm.com">加盟网站</a></li>
+                </ul>
+            </div>
+            <div class="last moblieLogin" >
+                <a href="myShopCar.html">
+                    <span class="shopCarIcon">
+                        <!-- 上标 -->
+                        <sup>3</sup>
+                    </span>
+                </a>
+                <div class="shopCar-wrap"  onselectstart="return false;">
+                    <p class="notes">最新加入的商品</p>
+                    <div class="shopCarList">
+                        <div class="carList-box">
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="1" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="2" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                            <dl class="shopCarListCon clearfix">
+                                <input type="checkbox" class="checkbox" checked>
+                                <dt class="shopImg fl">
+                                    <img src="images/breadIcon01.png" alt="">
+                                </dt>
+                                <dd class="shopDisc fl">
+                                    <a href="produceDetail.html" class="shopName">叉烧包</a>
+                                    <!-- 增加/减少 -->
+                                    <div class="count">
+                                        <span>数量</span>
+                                        <a href="javascript:;" class="sub" onclick="IncreaseD(this)">-</a>
+                                        <input name="count[0]" value="1" readonly>
+                                        <a href="javascript:;" class="add" onclick="IncreaseD(this)">+</a>
+                                    </div>
+                                </dd>
+                                <dd class="shopPrice fl">
+                                    ￥<span class="unitprice">15.00</span>
+                                    <a href="javascript:;" class="delete" onclick="DeleteBtn(this)">删除</a>
+                                </dd>
+                                <!-- 产品数量*价格 -->
+                                <dd class="priceTotal">
+                                    ￥
+                                    <span>15.00</span>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="summary clearfix">
+                            <div class="sumLeft fl">
+                                <p>
+                                    共
+                                    <strong class="shopTotal">0</strong>
+                                    件商品
+                                </p>
+                                <p>
+                                    共计￥
+                                    <strong class="shopTprice">0.00</strong>
+                                </p>
+                            </div>
+                            <div class="sumRight fr">
+                                <a href="accounted.html">进入结算</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <section class="wrap  shoppingCart-wrap accounted-wrap">
+        <div class="container">
+            <!-- 收货地址 -->
+            <div class="address-box">
+                <p class="notes">确定收货地址</p>
+                <div class="comfirmAdd">
+                    <div class="comfirmAddShow clearfix">
+                        <p class="userInfo">
+                            <span class="userAdd">广东省  广州市  海珠区  新港街道  新港西路135号</span>
+                            <span class="userName">（张小明 收）</span>
+                            <span class="userTel">12345678910</span>
+                        </p>
+                        <div class="changeAddress fr">
+                            <span class="changeBtn">更改收货地址</span>
+                        </div>
+                    </div>
+                    <div class="addressList-wrap">
+                        <div class="addressList">
+                            <label class="check-wrap">
+                                <span class="checkbox-inner-wrap">
+                                    <input type="radio" name="addItem" checked>
+                                    <span class="checkbox-inner"></span>
+                                </span>
+                                <span class="userAdd">广东省  广州市  海珠区  新港街道  新港西路135号</span>
+                                <span class="userName">（张小明 收）</span>
+                                <span class="userTel">12345678910</span>
+                            </label>
+                            <label class="check-wrap">
+                                <span class="checkbox-inner-wrap">
+                                    <input type="radio" name="addItem">
+                                    <span class="checkbox-inner"></span>
+                                </span>
+                                <span class="userAdd">广东省  广州市  荔湾区  新港街道  新港西路111号</span>
+                                <span class="userName">（李小明 收）</span>
+                                <span class="userTel">1152465465454</span>
+                            </label>
+                            <label class="check-wrap">
+                                <span class="checkbox-inner-wrap">
+                                    <input type="radio" name="addItem">
+                                    <span class="checkbox-inner"></span>
+                                </span>
+                                <span class="userAdd">广东省  广州市  荔湾区  新港街道  新港西路111号</span>
+                                <span class="userName">（李小明 收）</span>
+                                <span class="userTel">1152465465454</span>
+                            </label>
+                        </div>
+                        <p class="addNewAdd">
+                            <a href="addNewAddress"><span>+</span>新增地址</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 送货店铺 -->
+            <div class="store">
+                <p class="notes">送货店铺</p>
+                <div class="storeInfo">
+                    <p>
+                        送货店铺： 广东省 广州市 海珠区 新港西路135号
+                    </p>
+                    <p>
+                        联系电话： <span class="color-red">12345678910</span>
+                    </p>
+                    <p>
+                        预计送达时间： 30分钟
+                    </p>
+                </div>
+            </div>
+            <!-- 确认订单信息 -->
+            <div class="shoppingCart" id="shoppingCart" onselectstart="return false;">
+                <p class="notes">确认订单信息</p>
+                <div class="shoppingCartCon">
+                    <div class="carList-box">
+                        <dl class="shoppingCartList thead clearfix">
+                            <dd class="shopinfo clearfix">
+                                <span class="fl">商品信息</span>
+                                <span class="fr">商品属性</span>
+                            </dd>
+                            <dd class="unitprice">
+                                <span>单价</span>
+                            </dd>
+                            <dd class="shopCount">
+                                <span>数量</span>
+                            </dd>
+                            <!-- 产品数量*价格 -->
+                            <dd class="priceTotal">
+                                <span>金额</span>
+                            </dd>
+                        </dl>
+                        <dl class="shoppingCartList clearfix">
+                            <dd class="shopinfo">
+                                <span class="proImg">
+                                    <img src="images/produce01.jpg" alt="">
+                                </span>
+                                <span class="proName">
+                                    <a href="produceDetail.html">糯米粽子糯米粽子</a>
+                                </span>
+                                <span class="proWeight">净含量：500g</span>
+                            </dd>
+                            <dd class="unitprice">
+                                ￥
+                                <span>15.00</span>
+                            </dd>
+                            <dd class="shopCount">
+                                <i>数量：</i>
+                                <span>1</span>
+                            </dd>
+                            <!-- 产品数量*价格 -->
+                            <dd class="priceTotal">
+                                <i>总计：</i>
+                                ￥
+                                <span>15.00</span>
+                            </dd>
+                        </dl>
+                        <dl class="shoppingCartList clearfix">
+                            <dd class="shopinfo">
+                                <span class="proImg">
+                                    <img src="images/produce01.jpg" alt="">
+                                </span>
+                                <span class="proName">
+                                    <a href="produceDetail.html">糯米粽子糯米粽子</a>
+                                </span>
+                                <span class="proWeight">净含量：500g</span>
+                            </dd>
+                            <dd class="unitprice">
+                                ￥
+                                <span>15.00</span>
+                            </dd>
+                            <dd class="shopCount">
+                                <i>数量：</i>
+                                <span>1</span>
+                            </dd>
+                            <!-- 产品数量*价格 -->
+                            <dd class="priceTotal">
+                                <i>总计：</i>
+                                ￥
+                                <span>15.00</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="account">
+
+                    </div>
+                </div>
+            </div>
+            <!-- 支付方式 -->
+            <div class="choosePayWay">
+                <p class="notes">选择支付方式</p>
+                <div class="choose">
+                    <label class="check-wrap chooseList" id="WeChat">
+                        <span class="checkbox-inner-wrap">
+                            <input type="radio" name="payWay">
+                            <span class="checkbox-inner"></span>
+                        </span>
+                        <span class="payIcon"><img src="images/wx.png" alt=""></span>
+                        <span class="payText">微信支付</span>
+                    </label>
+                    <label class="check-wrap chooseList" id="Alipay">
+                        <span class="checkbox-inner-wrap">
+                            <input type="radio" name="payWay">
+                            <span class="checkbox-inner"></span>
+                        </span>
+                        <span class="payIcon"><img src="images/zfb.png" alt=""></span>
+                        <span class="payText">支付宝</span>
+                    </label>
+                </div>
+            </div>
+            <!-- 提交订单 -->
+            <div class="sendOrder clearfix">
+                <div class="orderInfo">
+                    <p>
+                        <span>实付：</span>
+                        <span class="money">￥ 90</span>
+                    </p>
+                    <p>
+                        <span>寄送至：</span>
+                        <span>广州市海珠区新港街道新港西路135号</span>
+                    </p>
+                    <p>
+                        <span>收件人：</span>
+                        <span>张小明</span>
+                    </p>
+                </div>
+                <div class="sendBtn">
+                    <span class="back">
+                        <a href="javascript:history.go(-1)">返回购物车</a>
+                    </span>
+                    <span class="sbtn"><a href="javascript:;">提交订单</a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 底部 -->
+    <footer class="wrap">
+        <div class="container clearfix">
+            <div class="footLeft">
+                <a href=""><img src="images/footLogo.png" alt=""></a>
+                <img src="images/ewm.png" alt="" class="ewm">
+            </div>
+            <div class="footRight">
+                <p class="footLinks">
+                    <a href="javascript:;">
+                        光头佬官方微信
+                        <span class="ewmImg">
+                            <img src="images/ewm.png" alt="">
+                        </span>
+                    </a>
+                    <a href="http://guangtoulao.gtljm.com/">光头佬官方网站</a>
+                    <a href="http://www.gtljm.com">光头佬加盟网站</a>
+                </p>
+                <p class="footLinks">
+                    <a href="index.html">
+                        首页
+                    </a>
+                    <a href="vipCenter.html">会员中心</a>
+                    <a href="helpCenter.html">帮助中心</a>
+                </p>
+                <p class="joinTel">
+                    <img src="images/tel.png" alt="">
+                </p>
+                <p class="info">
+                    广州光头佬联圣贸易有限公司
+
+                </p>
+                <p class="info">
+                    &copy;2017 粤ICP备13066649号-1
+                </p>
+
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(function(){
+
+            //打开、收起地址列表
+            var show = false;
+            $('.changeAddress').on('click',function(){
+                if(!show){
+                    $(this).addClass('active').find('.changeBtn').text('收起');
+                    show = true;
+                    $(this).parents('.comfirmAddShow').next('.addressList-wrap').slideDown();
+                }else{
+                    $(this).removeClass('active').find('.changeBtn').text('更改收货地址');
+                    $(this).parents('.comfirmAddShow').next('.addressList-wrap').slideUp();
+                    show = false;
+                }
+            })
+
+            //选择地址
+            $('.addressList-wrap .addressList .check-wrap .checkbox-inner-wrap input[type=radio][name=addItem]').on('change',function(){
+                var $userAdd = $('.comfirmAddShow .userInfo .userAdd'),
+                    $userName = $('.comfirmAddShow .userInfo .userName'),
+                    $userTel = $('.comfirmAddShow .userInfo .userTel'),
+                    $newsUserAdd = $(this).parents('.check-wrap').find('.userAdd').text(),
+                    $newsUserName = $(this).parents('.check-wrap').find('.userName').text(),
+                    $newsUserTel = $(this).parents('.check-wrap').find('.userTel').text();
+                $.ajax({
+                    url : 'data.json',
+                    type : 'post',
+                    date : {},
+                    success : function(){
+                        $userAdd.text($newsUserAdd);
+                        $userName.text($newsUserName);
+                        $userTel.text($newsUserTel);
+                    }
+                })
+            })
+
+            // 选择支付方式
+            var $payWayId;
+            $('.choosePayWay .choose .chooseList .checkbox-inner-wrap input[type=radio][name=payWay]').on('change',function(){
+                $payWayId = $(this).parents('.chooseList').attr('id');
+                //console.log($payWayId)
+
+            })
+            //提交订单
+            $('.sendBtn a').on('click',function(){
+                console.log($payWayId)
+                $.ajax({
+                    url:'data.json',
+                    type:'post',
+                    data:{'id':$payWayId},
+                    success:function(res){
+                        alert(111)
+                    },
+                    error:function(res){
+                        alert(222)
+                    }
+                })
+            })
+        })
+    </script>
+
+</body>
+</html>
